@@ -1,0 +1,9 @@
+services:
+  youtubecast-videoserver:
+    image: trevorsharp/youtubecast-videoserver:latest
+    container_name: youtubecast-videoserver
+    restart: unless-stopped
+    ports:
+      - 80:80
+    environment:
+      - STREAMING_ONLY=true
